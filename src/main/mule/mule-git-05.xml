@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="mule-git-05Flow" doc:id="39d32a97-7d5f-410c-a550-b2f598318f53" >
 		<http:listener doc:name="Listener" doc:id="ecefd9ac-01a9-454a-b251-b26364dd23df" config-ref="HTTP_Listener_config" path="test"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="c39d5319-ee4a-46fa-be11-a986fbf6dd69" />
 		<ee:transform doc:name="Transform Message" doc:id="e4c3afc7-74b2-401f-afaf-2cc629ceeb52" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
